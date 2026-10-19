@@ -13,6 +13,8 @@
 - **Collection/update:** Fetch the historical archive during the event. Fetch and retain the live forecast hourly during the event; record each request and fetch time.
 - **Expected volume:** Approximately 26,304 hourly records per distinct returned weather grid cell for 2023-2025. Deduplicate locations using the grid coordinates returned by the API.
 
+- **Update frequency:** Follows the selected weather model's update cycle, typically every few hours and model-dependent; the historical archive gains data as model runs are archived. Hourly fetches may therefore return no new forecast run. See [model update information](https://open-meteo.com/en/docs/model-updates).
+
 ### 2. OpenStreetMap Karachi features
 
 - **Publisher:** OpenStreetMap contributors; queried through the [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide).
@@ -20,7 +22,9 @@
 - **Licence:** [Open Database License (ODbL)](https://www.openstreetmap.org/copyright). Attribution and applicable share-alike requirements will be followed.
 - **Collection/update:** Save a Karachi-area extract during the event, together with the exact query and fetch time. This is a snapshot, not an hourly-updating source.
 
-**Independent source outside the climate-track suggestions:** OpenStreetMap. It is a separately maintained, contributor-built geospatial database used here for local work-zone context.
+- **Update frequency:** OSM edits are replicated continuously (minutely replication), and Overpass typically lags by a few minutes. The project takes a snapshot, not a live feed, and saves the response's `osm_base` timestamp.
+  
+**Independent source outside the climate-track suggestions:** OpenStreetMap. It is a separately maintained, contributor-built geospatial database used here for local work-zone context. It is credible for mapped geographic context because contributor edits and histories are publicly inspectable. Karachi coverage may be incomplete, so mapped features are treated as context only.
 
 ## Additional RAG reference sources
 
@@ -32,4 +36,6 @@ The hourly weather data supports comparing candidate shift windows. OpenStreetMa
 
 All selected data will be collected during the event under the applicable licences and terms. Raw responses/files will be preserved unchanged. `manifest.csv` will record each raw file's source, exact query or URL, fetch time, SHA-256 hash and licence.
 
-**Declared baseline:** Predict next-hour apparent temperature using the value from the same hour on the previous day. Evaluate on a later, time-held-out period using MAE in degrees Celsius.
+## Baseline declared before evaluation
+
+For each target hour **H** and zone, predict apparent temperature as the value 24 hours earlier (the same local hour on the previous day; Pakistan has no daylight saving, so this is exactly H − 24 h). Forecasts for H are issued at T = H − 24 h and may use only data timestamped at or before T. Use 2023-2024 for development (train on 2023, validate on 2024) and hold 2025 out as the chronological test period; do not tune on the test period. Report mean absolute error (MAE) in degrees Celsius.
