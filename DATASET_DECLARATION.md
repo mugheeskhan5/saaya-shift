@@ -3,33 +3,39 @@
 **Project:** SaayaShift - Heat-Aware Shift Planner (Karachi-first)  
 **Primary user:** A supervisor scheduling outdoor field work in Karachi.
 
-## Source 1: Open-Meteo weather data
+## Declared datasets
 
-- **Source and publisher:** Open-Meteo Historical Forecast API for historical hourly forecasts and Open-Meteo Forecast API for the current outlook. These endpoints are one publisher and count as one source.
-- **URLs:** [Historical Forecast API documentation](https://open-meteo.com/en/docs/historical-forecast-api) and [Forecast API documentation](https://open-meteo.com/en/docs); data endpoints are `https://historical-forecast-api.open-meteo.com/v1/forecast` and `https://api.open-meteo.com/v1/forecast`.
-- **Licence and terms:** Weather data is provided under [CC BY 4.0](https://open-meteo.com/en/licence), with attribution. The free API is for non-commercial use under [Open-Meteo's terms](https://open-meteo.com/en/terms); this hackathon project will use it non-commercially and display attribution with weather data.
-- **Update frequency:** The live forecast follows the selected weather model's update cycle, typically every few hours and model-dependent. The historical archive gains data as model runs are archived. The project will record the requested model (where available) and fetch time; repeated hourly checks do not imply a new forecast run each hour. See [model update information](https://open-meteo.com/en/docs/model-updates).
-- **Expected volume:** Request hourly data for 2023-01-01 through 2025-12-31. This is approximately **26,304 hourly records per distinct returned grid cell** (three years, including leap year 2024), exceeding the two-year hourly-data threshold on its own. Duplicate coordinates that resolve to the same returned grid cell will be deduplicated.
+### 1. Open-Meteo weather data
 
-## Source 2: OpenStreetMap Karachi features
+- **Publisher:** Open-Meteo
+- **Sources:** [Historical Forecast API](https://open-meteo.com/en/docs/historical-forecast-api) for hourly history (2023-01-01 to 2025-12-31); [Forecast API](https://open-meteo.com/en/docs) for a rolling 72-hour outlook. These endpoints are one source, not two independent sources.
+- **Licence:** API data under [CC BY 4.0](https://open-meteo.com/en/licence). The free API is for non-commercial use; attribution will be shown with weather data.
+- **Collection/update:** Fetch the historical archive during the event. Fetch and retain the live forecast hourly during the event; record each request and fetch time.
+- **Expected volume:** Approximately 26,304 hourly records per distinct returned weather grid cell for 2023-2025. Deduplicate locations using the grid coordinates returned by the API.
 
-- **Source and publisher:** OpenStreetMap (OSM), published and maintained by the OpenStreetMap Foundation with data contributed by the mapping community; Karachi features will be queried through the [Overpass API](https://overpass-api.de/api/interpreter). The [Overpass API guide](https://wiki.openstreetmap.org/wiki/Overpass_API) documents the query service.
-- **Licence and terms:** OSM data is available under the [Open Database License (ODbL)](https://www.openstreetmap.org/copyright). The project will attribute “© OpenStreetMap contributors” and comply with applicable ODbL share-alike requirements.
-- **Update frequency:** OSM edits are replicated continuously; OSM provides minutely replication updates, while Overpass commonly has a short replication delay of a few minutes. This project will collect a Karachi-area snapshot during the event and save the response's `osm_base` timestamp, exact query, and fetch time. It is a snapshot, not a continuously refreshed project feed.
-- **Expected volume:** The number of returned road, park/green-space, and relevant facility features depends on the exact Karachi-area query and will be reported in the manifest after collection. This source supplements the weather data; the volume threshold is met by Source 1 alone.
+- **Update frequency:** Follows the selected weather model's update cycle, typically every few hours and model-dependent; the historical archive gains data as model runs are archived. Hourly fetches may therefore return no new forecast run. See [model update information](https://open-meteo.com/en/docs/model-updates).
 
-**Source outside the climate-track suggestions:** OpenStreetMap is the selected outside-track-list source. It is a separate, contributor-maintained geographic database rather than a weather/climate API. It is credible for mapped geographic context because contributors maintain map objects and their edit histories are publicly inspectable ([OSM contributor information](https://wiki.openstreetmap.org/wiki/Contributors)). Karachi coverage may be incomplete, so the project will treat mapped features as context, not as proof of shade, heat exposure, worker presence, or safety.
+### 2. OpenStreetMap Karachi features
 
-## Fit to the problem and primary user
+- **Publisher:** OpenStreetMap contributors; queried through the [Overpass API](https://wiki.openstreetmap.org/wiki/Overpass_API/Language_Guide).
+- **Data used:** Karachi roads and mapped parks/green spaces or facilities relevant to outdoor work zones. These features provide geographic context; they are not heat measurements or worker counts.
+- **Licence:** [Open Database License (ODbL)](https://www.openstreetmap.org/copyright). Attribution and applicable share-alike requirements will be followed.
+- **Collection/update:** Save a Karachi-area extract during the event, together with the exact query and fetch time. This is a snapshot, not an hourly-updating source.
 
-Hourly apparent temperature from Open-Meteo lets a Karachi supervisor compare proposed outdoor shift windows using a consistent weather-based heat-exposure proxy. OSM roads and mapped green spaces or facilities can help locate supervisor-selected work zones and relevant nearby context. OSM does not measure local temperature or establish that a route or worksite is safe. SaayaShift will explain its data limits and will not predict individual illness or declare a shift medically safe.
+- **Update frequency:** OSM edits are replicated continuously (minutely replication), and Overpass typically lags by a few minutes. The project takes a snapshot, not a live feed, and saves the response's `osm_base` timestamp.
+  
+**Independent source outside the climate-track suggestions:** OpenStreetMap. It is a separately maintained, contributor-built geospatial database used here for local work-zone context. It is credible for mapped geographic context because contributor edits and histories are publicly inspectable. Karachi coverage may be incomplete, so mapped features are treated as context only.
+
+## Additional RAG reference sources
+
+The planned guidance corpus includes [PMD Sindh Heatwave Bulletins](https://weather.gov.pk/regional/Sindh/heatwave-bulletin) and the [NDMA Heat Wave Survival Guide](https://ndma.gov.pk/storage/publications/September2025/h1HygK0WyGmzlPF2CXjj.pdf). Their reuse licences/terms must be confirmed with the publishers before downloading or ingesting them. If permission cannot be confirmed, these documents will be omitted or replaced with sources whose reuse terms are clear. They are guidance references, not training labels, and are not used to claim the minimum-volume requirement.
+
+## Fit, collection and evaluation
+
+The hourly weather data supports comparing candidate shift windows. OpenStreetMap supplies local work-zone context. The system reports a weather-based heat-exposure proxy and does not predict individual illness or declare a shift medically safe.
+
+All selected data will be collected during the event under the applicable licences and terms. Raw responses/files will be preserved unchanged. `manifest.csv` will record each raw file's source, exact query or URL, fetch time, SHA-256 hash and licence.
 
 ## Baseline declared before evaluation
 
-Before viewing any evaluation results, freeze this baseline: for each target hour **H**, predict apparent temperature as the value for the same local hour on the previous day (**H minus 24 hours**). Use 2023-2024 for development and hold 2025 out as the chronological test period; do not tune on the test period. Report mean absolute error (MAE) in degrees Celsius.
-
-## Collection and provenance
-
-Selected data will be fetched during the event under the stated licences and terms. Raw responses will be preserved unchanged. `manifest.csv` will record each raw file's source, exact URL/query, fetch time, SHA-256 hash, licence, and (for OSM) the `osm_base` timestamp.
-
-Potential PMD or NDMA heat-safety documents are not part of the declared dataset or RAG corpus unless their publishers' reuse terms or permission are confirmed before collection. If reuse cannot be confirmed, they will be omitted or replaced with material whose terms permit the intended use.
+For each target hour **H** and zone, predict apparent temperature as the value 24 hours earlier (the same local hour on the previous day; Pakistan has no daylight saving, so this is exactly H − 24 h). Forecasts for H are issued at T = H − 24 h and may use only data timestamped at or before T. Use 2023-2024 for development (train on 2023, validate on 2024) and hold 2025 out as the chronological test period; do not tune on the test period. Report mean absolute error (MAE) in degrees Celsius.
