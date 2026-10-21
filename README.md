@@ -159,10 +159,7 @@ The command writes the original CSV and raw JSON under `evidence/`; running it a
 
 - Lower forecast heat **does not certify safe working conditions**. The app does not assess individual health, workload, clothing, acclimatization, or on-site shade. For an emergency, contact official local emergency medical services.
 - The prototype uses one Karachi weather grid. It does not provide worksite microclimate predictions.
-- Forecasts are modeled values, not measured worker exposure. Unsupported guidance questions receive an abstention.
-- The saved forecast is a snapshot. A working pipeline and upload process are needed to keep the hosted data current.
-- Full multilingual, language-model-generated RAG is not implemented.
-
+  
 ## Complete data and evidence
 
 This package includes every file found in the source project's `data/` and `evidence/` folders when it was assembled. The files are preserved byte for byte; generated raw/cleaned/processed tables, the DuckDB warehouse, provenance manifests, quality/run logs, frozen model artifacts, predictions, group results, and original console reports are included. `Summary-draft.pdf` is a draft and must not be mistaken for an approved final summary.
