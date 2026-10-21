@@ -1,0 +1,261 @@
+{
+  "windows": 63,
+  "forecast_stale": false,
+  "selected_window": {
+    "window_id": "e18da73806c3bd565d77",
+    "start_local": "2026-10-25T06:00:00+05:00",
+    "end_local": "2026-10-25T10:00:00+05:00",
+    "mean_c": 20.974999999999998,
+    "peak_c": 23.8,
+    "degree_hours": 83.89999999999999,
+    "row_ids": [
+      "weather-c6e1f2a57b41e5402ffa17ec",
+      "weather-fb55a77f97970c0d3fa97b47",
+      "weather-984f93a7ba25dc97c63afb83",
+      "weather-93d4eee81c94a0849d598dad"
+    ],
+    "score_reason": "Lowest mean apparent temperature, then lowest peak, then earliest start. No safe-work certification.",
+    "rank": 1
+  },
+  "numeric_answer": {
+    "answer": "For the selected window, code calculates mean apparent temperature 21.0 \u00b0C and maximum 23.8 \u00b0C across 4 hourly rows. These are weather-model values, not measured worker exposure or a medical safety threshold.\n\nNIOSH general guidance: When possible, schedule hot jobs for the cooler part of the day (early morning, late afternoon, or night shift) and/or schedule hot jobs on alternate rather than succes - sive days.\n\nThis is general source guidance, not an assessment of worker safety or professional advice. For an emergency, contact local emergency medical services.\n\nSource: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+    "citations": [
+      {
+        "chunk_id": "niosh-6.2.1-8bdfc29c72fa8c2a",
+        "source_title": "NIOSH: Occupational Exposure to Heat and Hot Environments (2016-106)",
+        "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf#page=107",
+        "section": "6.2.1 Limiting Exposure Time and/or Temperature",
+        "printed_page": 75,
+        "pdf_page": 107,
+        "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+        "char_start": 1252,
+        "char_end": 1439
+      }
+    ],
+    "row_ids": [
+      "weather-c6e1f2a57b41e5402ffa17ec",
+      "weather-fb55a77f97970c0d3fa97b47",
+      "weather-984f93a7ba25dc97c63afb83",
+      "weather-93d4eee81c94a0849d598dad"
+    ],
+    "supported": true,
+    "method": "extractive_retrieval",
+    "status": {
+      "ok": true,
+      "run_id": "85cc0702ce154a8daeca509aff067934",
+      "updated_at_utc": "2026-10-19T20:13:27.789209Z",
+      "sources": {
+        "weather": {
+          "status": "available",
+          "rows": 26304,
+          "last_fetch_utc": "2026-10-19T14:37:01.034190Z",
+          "age_hours": 5.604,
+          "stale": false,
+          "stale_after_hours": null,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "historical forecast model series",
+          "data_start_utc": "2022-12-31T19:00:00Z",
+          "data_end_utc": "2025-12-31T18:00:00Z",
+          "returned_latitude": 24.875,
+          "returned_longitude": 67.0,
+          "grid_ids": [
+            "icon_global:24.87500:67.00000"
+          ],
+          "model": "icon_global"
+        },
+        "forecast": {
+          "status": "available",
+          "rows": 168,
+          "last_fetch_utc": "2026-10-19T20:13:20.010344Z",
+          "age_hours": 0.0,
+          "stale": false,
+          "stale_after_hours": 3,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "live forecast model series",
+          "data_start_utc": "2026-10-19T19:00:00Z",
+          "data_end_utc": "2026-10-26T18:00:00Z",
+          "returned_latitude": 24.875,
+          "returned_longitude": 67.0,
+          "grid_ids": [
+            "icon_global:24.87500:67.00000"
+          ],
+          "model": "icon_global"
+        },
+        "osm": {
+          "status": "available",
+          "rows": 25075,
+          "last_fetch_utc": "2026-10-19T14:39:46.458150Z",
+          "age_hours": 5.56,
+          "stale": false,
+          "stale_after_hours": 168,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "mapped geometry snapshot",
+          "osm_base": "2026-10-19T14:36:06Z",
+          "category_counts": {
+            "road": 23445,
+            "park": 646,
+            "hospital": 626,
+            "clinic": 358
+          }
+        }
+      },
+      "errors": [],
+      "offline": false,
+      "integrity": {
+        "manifest_rows": 23,
+        "unique_raw_files_verified": 16
+      },
+      "warehouse": "C:\\Users\\User\\Downloads\\hack0\\data\\warehouse.duckdb",
+      "quality": {
+        "status": "pass",
+        "checked_at_utc": "2026-10-19T20:13:27.789209Z",
+        "checks": 53,
+        "findings": 0,
+        "flagged_findings": 0,
+        "fixed_rows": 0,
+        "filled_values": 0,
+        "log": "C:\\Users\\User\\Downloads\\hack0\\data\\quality_log.jsonl"
+      },
+      "duration_seconds": 16.41742249998788,
+      "acquisition": {
+        "http_calls": 2,
+        "cache_hits": 7
+      },
+      "guidance": {
+        "status": "PASS",
+        "method": "extractive_retrieval",
+        "llm_generation": "NOT IMPLEMENTED",
+        "chunks": 5,
+        "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+        "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf",
+        "attribution": "Source: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+        "reuse_url": "https://www.cdc.gov/other/agencymaterials.html",
+        "manifest": "guidance_manifest.csv",
+        "built_at_utc": "2026-10-19T20:13:29.410714Z"
+      },
+      "started_at_utc": "2026-10-19T20:13:13.219653Z",
+      "finished_at_utc": "2026-10-19T20:13:29.637222Z",
+      "status": "completed",
+      "rss_mb_at_end": 206.57421875,
+      "last_success_utc": "2026-10-19T20:13:29.637222Z"
+    },
+    "forecast_age_hours": 0.07640697944444445,
+    "forecast_stale": false,
+    "checked_at_utc": "2026-10-19T20:17:55.075470+00:00"
+  },
+  "safety_abstention": {
+    "answer": "I don't know. The evidence cannot establish individual safety, health outcomes, or medical treatment. For an emergency, contact local emergency medical services.",
+    "citations": [],
+    "row_ids": [],
+    "supported": false,
+    "method": "abstention",
+    "status": {
+      "ok": true,
+      "run_id": "85cc0702ce154a8daeca509aff067934",
+      "updated_at_utc": "2026-10-19T20:13:27.789209Z",
+      "sources": {
+        "weather": {
+          "status": "available",
+          "rows": 26304,
+          "last_fetch_utc": "2026-10-19T14:37:01.034190Z",
+          "age_hours": 5.604,
+          "stale": false,
+          "stale_after_hours": null,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "historical forecast model series",
+          "data_start_utc": "2022-12-31T19:00:00Z",
+          "data_end_utc": "2025-12-31T18:00:00Z",
+          "returned_latitude": 24.875,
+          "returned_longitude": 67.0,
+          "grid_ids": [
+            "icon_global:24.87500:67.00000"
+          ],
+          "model": "icon_global"
+        },
+        "forecast": {
+          "status": "available",
+          "rows": 168,
+          "last_fetch_utc": "2026-10-19T20:13:20.010344Z",
+          "age_hours": 0.0,
+          "stale": false,
+          "stale_after_hours": 3,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "live forecast model series",
+          "data_start_utc": "2026-10-19T19:00:00Z",
+          "data_end_utc": "2026-10-26T18:00:00Z",
+          "returned_latitude": 24.875,
+          "returned_longitude": 67.0,
+          "grid_ids": [
+            "icon_global:24.87500:67.00000"
+          ],
+          "model": "icon_global"
+        },
+        "osm": {
+          "status": "available",
+          "rows": 25075,
+          "last_fetch_utc": "2026-10-19T14:39:46.458150Z",
+          "age_hours": 5.56,
+          "stale": false,
+          "stale_after_hours": 168,
+          "requested_latitude": 24.8607,
+          "requested_longitude": 67.0011,
+          "kind": "mapped geometry snapshot",
+          "osm_base": "2026-10-19T14:36:06Z",
+          "category_counts": {
+            "road": 23445,
+            "park": 646,
+            "hospital": 626,
+            "clinic": 358
+          }
+        }
+      },
+      "errors": [],
+      "offline": false,
+      "integrity": {
+        "manifest_rows": 23,
+        "unique_raw_files_verified": 16
+      },
+      "warehouse": "C:\\Users\\User\\Downloads\\hack0\\data\\warehouse.duckdb",
+      "quality": {
+        "status": "pass",
+        "checked_at_utc": "2026-10-19T20:13:27.789209Z",
+        "checks": 53,
+        "findings": 0,
+        "flagged_findings": 0,
+        "fixed_rows": 0,
+        "filled_values": 0,
+        "log": "C:\\Users\\User\\Downloads\\hack0\\data\\quality_log.jsonl"
+      },
+      "duration_seconds": 16.41742249998788,
+      "acquisition": {
+        "http_calls": 2,
+        "cache_hits": 7
+      },
+      "guidance": {
+        "status": "PASS",
+        "method": "extractive_retrieval",
+        "llm_generation": "NOT IMPLEMENTED",
+        "chunks": 5,
+        "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+        "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf",
+        "attribution": "Source: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+        "reuse_url": "https://www.cdc.gov/other/agencymaterials.html",
+        "manifest": "guidance_manifest.csv",
+        "built_at_utc": "2026-10-19T20:13:29.410714Z"
+      },
+      "started_at_utc": "2026-10-19T20:13:13.219653Z",
+      "finished_at_utc": "2026-10-19T20:13:29.637222Z",
+      "status": "completed",
+      "rss_mb_at_end": 206.57421875,
+      "last_success_utc": "2026-10-19T20:13:29.637222Z"
+    },
+    "forecast_age_hours": 0.07641980055555556,
+    "forecast_stale": false,
+    "checked_at_utc": "2026-10-19T20:17:55.121626+00:00"
+  }
+}

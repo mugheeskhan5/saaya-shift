@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "evaluated_at_utc": "2026-10-19T14:41:27.473623+00:00",
+  "model_name": "Ridge(alpha=1)",
+  "baseline_name": "H-24 same-local-hour persistence (frozen)",
+  "baseline_mae_c": 1.1132534246575343,
+  "model_mae_c": 0.3416397325251204,
+  "improvement_c": 0.7716136921324139,
+  "mae_ci95_c": [
+    0.321862820257344,
+    0.36258366258049485
+  ],
+  "improvement_ci95_c": [
+    0.6706424522787162,
+    0.8867582270392355
+  ],
+  "interval_radius_c": 0.6222445014158637,
+  "interval_coverage": 0.8502283105022831,
+  "groups": [
+    {
+      "group": "season:monsoon",
+      "n": 2928,
+      "model_mae_c": 0.28283029746904637,
+      "baseline_mae_c": 0.8490095628415301,
+      "interval_coverage": 0.9132513661202186
+    },
+    {
+      "group": "season:post-monsoon",
+      "n": 1464,
+      "model_mae_c": 0.3622170363589276,
+      "baseline_mae_c": 1.0297131147540983,
+      "interval_coverage": 0.8278688524590164
+    },
+    {
+      "group": "season:pre-monsoon",
+      "n": 2208,
+      "model_mae_c": 0.3372054251870134,
+      "baseline_mae_c": 1.0595561594202898,
+      "interval_coverage": 0.8478260869565217
+    },
+    {
+      "group": "season:winter",
+      "n": 2160,
+      "model_mae_c": 0.4119451971705051,
+      "baseline_mae_c": 1.582962962962963,
+      "interval_coverage": 0.7824074074074074
+    },
+    {
+      "group": "time_of_day:night",
+      "n": 2190,
+      "model_mae_c": 0.26974548070531523,
+      "baseline_mae_c": 1.1859817351598174,
+      "interval_coverage": 0.9168949771689497
+    },
+    {
+      "group": "time_of_day:morning",
+      "n": 2190,
+      "model_mae_c": 0.3878750883694171,
+      "baseline_mae_c": 1.1714155251141554,
+      "interval_coverage": 0.8054794520547945
+    },
+    {
+      "group": "time_of_day:afternoon",
+      "n": 2190,
+      "model_mae_c": 0.3763511425387254,
+      "baseline_mae_c": 1.1442009132420092,
+      "interval_coverage": 0.8168949771689498
+    },
+    {
+      "group": "time_of_day:evening",
+      "n": 2190,
+      "model_mae_c": 0.3325872184870237,
+      "baseline_mae_c": 0.9514155251141552,
+      "interval_coverage": 0.8616438356164383
+    }
+  ],
+  "weakest_group": {
+    "group": "season:winter",
+    "n": 2160,
+    "model_mae_c": 0.4119451971705051,
+    "baseline_mae_c": 1.582962962962963,
+    "interval_coverage": 0.7824074074074074
+  },
+  "split_counts": {
+    "train_2023": 8712,
+    "selection_2024_h1": 4368,
+    "calibration_2024_h2": 4416,
+    "test_2025": 8760,
+    "excluded_missing_target_or_predictors": 48
+  },
+  "validation_mae_c": {
+    "ridge": 0.37085624855057786,
+    "lag_one": 0.7113095238095238
+  },
+  "runtime_seconds": 1.8647092000028351,
+  "rss_mb_at_end": 208.44140625,
+  "provenance": {
+    "weather_sha256": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+    "protocol_sha256": "ad87f885625fbbea15d2c0a35510ef949925dd251a43d6afebcf1612380735d3",
+    "implementation_sha256": "a532d6d31e33c497e28b04c67b4272c3811eb4c4922637ff951627d153fc9d39"
+  },
+  "frozen_artifact_sha256": "0b16691461c3aadb04b4117698faf4e88d27bb17c79862c159c44453d4ef970a",
+  "limitations": [
+    "Retrospective rolling one-hour modeled-series prediction; no station observations or operational issue-time validation.",
+    "One Karachi grid cell; no district, occupation, demographic or nationwide validation.",
+    "90% interval calibrated on 2024; actual 2025 coverage is empirical and may differ.",
+    "Seven-day block bootstrap assumes approximate local stability; model-version changes and temporal dependence remain.",
+    "Live shift ranking uses provider forecasts, not this experimental model."
+  ]
+}

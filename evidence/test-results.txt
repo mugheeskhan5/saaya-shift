@@ -1,0 +1,18 @@
+...................                                                      [100%]
+============================== warnings summary ===============================
+tests/test_app.py::test_empty_app_reports_missing_evidence_without_exception
+tests/test_app.py::test_actual_saved_artifacts_load_without_exception
+  C:\Users\User\Downloads\hack0\.venv\Lib\site-packages\streamlit\time_util.py:73: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    seconds: float = pd.Timedelta(t).total_seconds()
+
+tests/test_app.py: 54 warnings
+tests/test_planner.py: 9 warnings
+  C:\Users\User\Downloads\hack0\saayashift\planner.py:49: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    "end_local": (start + pd.Timedelta(hours=duration_hours)).tz_convert(timezone).isoformat(),
+
+tests/test_model.py: 18 warnings
+  C:\Users\User\Downloads\hack0\saayashift\model.py:34: DeprecationWarning: The 'generic' unit for NumPy timedelta is deprecated, and will raise an error in the future. This includes implicit conversion of bare integers (e.g. `+ 1`). Please use a specific unit instead.
+    data[f"lag_{lag}"] = series.reindex(data.index - pd.Timedelta(hours=lag)).to_numpy()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+19 passed, 83 warnings in 23.49s

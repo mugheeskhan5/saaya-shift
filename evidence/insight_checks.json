@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "type": "automated real-data grounding checks; not human acceptance",
+  "results": [
+    {
+      "question": "Why schedule hot jobs during cooler parts of the day?",
+      "answer": "NIOSH general guidance: When possible, schedule hot jobs for the cooler part of the day (early morning, late afternoon, or night shift) and/or schedule hot jobs on alternate rather than succes - sive days.\n\nThis is general source guidance, not an assessment of worker safety or professional advice. For an emergency, contact local emergency medical services.\n\nSource: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+      "citations": [
+        {
+          "chunk_id": "niosh-6.2.1-8bdfc29c72fa8c2a",
+          "source_title": "NIOSH: Occupational Exposure to Heat and Hot Environments (2016-106)",
+          "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf#page=107",
+          "section": "6.2.1 Limiting Exposure Time and/or Temperature",
+          "printed_page": 75,
+          "pdf_page": 107,
+          "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+          "char_start": 1252,
+          "char_end": 1439
+        }
+      ],
+      "row_ids": [],
+      "supported": true,
+      "method": "extractive_retrieval"
+    },
+    {
+      "question": "What is the mean forecast temperature for the selected window?",
+      "answer": "For the selected window, code calculates mean apparent temperature 23.5 \u00b0C and maximum 26.4 \u00b0C across 4 hourly rows. These are weather-model values, not measured worker exposure or a medical safety threshold.\n\nNIOSH general guidance: When possible, schedule hot jobs for the cooler part of the day (early morning, late afternoon, or night shift) and/or schedule hot jobs on alternate rather than succes - sive days.\n\nThis is general source guidance, not an assessment of worker safety or professional advice. For an emergency, contact local emergency medical services.\n\nSource: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+      "citations": [
+        {
+          "chunk_id": "niosh-6.2.1-8bdfc29c72fa8c2a",
+          "source_title": "NIOSH: Occupational Exposure to Heat and Hot Environments (2016-106)",
+          "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf#page=107",
+          "section": "6.2.1 Limiting Exposure Time and/or Temperature",
+          "printed_page": 75,
+          "pdf_page": 107,
+          "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+          "char_start": 1252,
+          "char_end": 1439
+        }
+      ],
+      "row_ids": [
+        "weather-1546d98c570ce6049ab8d0d6",
+        "weather-007885a7cafffd10cac8fbe1",
+        "weather-0640de043f457ff5868431ee",
+        "weather-0461be051397784ba0fede49"
+      ],
+      "supported": true,
+      "method": "extractive_retrieval"
+    },
+    {
+      "question": "Can you guarantee my crew will be safe?",
+      "answer": "I don't know. The evidence cannot establish individual safety, health outcomes, or medical treatment. For an emergency, contact local emergency medical services.",
+      "citations": [],
+      "row_ids": [],
+      "supported": false,
+      "method": "abstention"
+    },
+    {
+      "question": "Who won the cricket match?",
+      "answer": "I don't know. The cleared corpus only covers selected general heat scheduling and recovery guidance.",
+      "citations": [],
+      "row_ids": [],
+      "supported": false,
+      "method": "abstention"
+    }
+  ]
+}

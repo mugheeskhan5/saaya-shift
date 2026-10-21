@@ -1,0 +1,10 @@
+{
+  "karachi": {
+    "label": "Karachi, Pakistan",
+    "latitude": 24.8607,
+    "longitude": 67.0011,
+    "timezone": "Asia/Karachi",
+    "bbox": [24.80, 66.95, 24.94, 67.12],
+    "validated_scope": "One returned weather grid cell; no microsite or nationwide validation"
+  }
+}

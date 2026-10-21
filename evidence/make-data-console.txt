@@ -1,0 +1,102 @@
+{
+  "ok": true,
+  "run_id": "00de5976f2474f0090d43f22b8bff7bb",
+  "updated_at_utc": "2026-10-19T14:53:11.366452Z",
+  "sources": {
+    "weather": {
+      "status": "available",
+      "rows": 26304,
+      "last_fetch_utc": "2026-10-19T14:37:01.034190Z",
+      "age_hours": 0.267,
+      "stale": false,
+      "stale_after_hours": null,
+      "requested_latitude": 24.8607,
+      "requested_longitude": 67.0011,
+      "kind": "historical forecast model series",
+      "data_start_utc": "2022-12-31T19:00:00Z",
+      "data_end_utc": "2025-12-31T18:00:00Z",
+      "returned_latitude": 24.875,
+      "returned_longitude": 67.0,
+      "grid_ids": [
+        "icon_global:24.87500:67.00000"
+      ],
+      "model": "icon_global"
+    },
+    "forecast": {
+      "status": "available",
+      "rows": 168,
+      "last_fetch_utc": "2026-10-19T14:53:06.523023Z",
+      "age_hours": 0.0,
+      "stale": false,
+      "stale_after_hours": 3,
+      "requested_latitude": 24.8607,
+      "requested_longitude": 67.0011,
+      "kind": "live forecast model series",
+      "data_start_utc": "2026-10-18T19:00:00Z",
+      "data_end_utc": "2026-10-25T18:00:00Z",
+      "returned_latitude": 24.875,
+      "returned_longitude": 67.0,
+      "grid_ids": [
+        "icon_global:24.87500:67.00000"
+      ],
+      "model": "icon_global"
+    },
+    "osm": {
+      "status": "available",
+      "rows": 25075,
+      "last_fetch_utc": "2026-10-19T14:39:46.458150Z",
+      "age_hours": 0.221,
+      "stale": false,
+      "stale_after_hours": 168,
+      "requested_latitude": 24.8607,
+      "requested_longitude": 67.0011,
+      "kind": "mapped geometry snapshot",
+      "osm_base": "2026-10-19T14:36:06Z",
+      "category_counts": {
+        "road": 23445,
+        "park": 646,
+        "hospital": 626,
+        "clinic": 358
+      }
+    }
+  },
+  "errors": [],
+  "offline": false,
+  "integrity": {
+    "manifest_rows": 21,
+    "unique_raw_files_verified": 15
+  },
+  "warehouse": "data\\warehouse.duckdb",
+  "quality": {
+    "status": "pass",
+    "checked_at_utc": "2026-10-19T14:53:11.366452Z",
+    "checks": 53,
+    "findings": 0,
+    "flagged_findings": 0,
+    "fixed_rows": 0,
+    "filled_values": 0,
+    "log": "data\\quality_log.jsonl"
+  },
+  "duration_seconds": 10.63849100000516,
+  "acquisition": {
+    "http_calls": 2,
+    "cache_hits": 7
+  },
+  "guidance": {
+    "status": "PASS",
+    "method": "extractive_retrieval",
+    "llm_generation": "NOT IMPLEMENTED",
+    "chunks": 5,
+    "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+    "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf",
+    "attribution": "Source: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+    "reuse_url": "https://www.cdc.gov/other/agencymaterials.html",
+    "manifest": "guidance_manifest.csv",
+    "built_at_utc": "2026-10-19T14:53:12.601114Z"
+  },
+  "started_at_utc": "2026-10-19T14:53:02.126496Z",
+  "finished_at_utc": "2026-10-19T14:53:12.757710Z",
+  "status": "completed",
+  "rss_mb_at_end": 151.07421875,
+  "last_success_utc": "2026-10-19T14:53:12.757710Z"
+}

@@ -1,0 +1,51 @@
+{
+  "type": "packaging validation in scratch directory; not a historical Prefect run",
+  "command": "make.cmd data --offline --data-dir empty-rebuild/data",
+  "started_at_utc": "2026-10-21T16:17:06.930549Z",
+  "finished_at_utc": "2026-10-21T16:17:17.897229Z",
+  "ok": true,
+  "http_calls": 0,
+  "quality": {
+    "status": "pass",
+    "checked_at_utc": "2026-10-21T16:17:16.675832Z",
+    "checks": 53,
+    "findings": 0,
+    "flagged_findings": 0,
+    "fixed_rows": 0,
+    "filled_values": 0,
+    "log": "empty-rebuild\\data\\quality_log.jsonl"
+  },
+  "started_without_cleaned_processed_or_warehouse": true,
+  "table_checks": {
+    "cleaned/weather.csv": {
+      "expected_sha256": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "rebuilt_sha256": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "identical": true
+    },
+    "cleaned/forecast.csv": {
+      "expected_sha256": "b86ba3b2ecc665e79aff16ab59180021d8c3e8ded9809554f39c04d8b733b1f2",
+      "rebuilt_sha256": "b86ba3b2ecc665e79aff16ab59180021d8c3e8ded9809554f39c04d8b733b1f2",
+      "identical": true
+    },
+    "cleaned/osm.csv": {
+      "expected_sha256": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "rebuilt_sha256": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "identical": true
+    },
+    "processed/weather.csv": {
+      "expected_sha256": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "rebuilt_sha256": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "identical": true
+    },
+    "processed/forecast.csv": {
+      "expected_sha256": "b86ba3b2ecc665e79aff16ab59180021d8c3e8ded9809554f39c04d8b733b1f2",
+      "rebuilt_sha256": "b86ba3b2ecc665e79aff16ab59180021d8c3e8ded9809554f39c04d8b733b1f2",
+      "identical": true
+    },
+    "processed/osm.csv": {
+      "expected_sha256": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "rebuilt_sha256": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "identical": true
+    }
+  }
+}

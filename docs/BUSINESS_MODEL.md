@@ -1,0 +1,13 @@
+# Problem, Pakistan impact and sustainability
+
+Primary user: supervisor scheduling outdoor crews in Karachi. Decision: choose a feasible work window with lower modeled apparent-temperature exposure, within actual operating constraints. The payer could be a municipal contractor, utilities operator or NGO; these are hypotheses, not customers.
+
+For supervisors who need to schedule outdoor work, SaayaShift compares feasible windows and exposes the weather and guidance evidence, so they can discuss scheduling trade-offs. It is a decision-support prototype, not an occupational-health compliance tool.
+
+Problem evidence supplied by the user: Dawn's [June 2023 report](https://www.dawn.com/news/1758265/as-karachi-suffers-from-merciless-heat-some-suffer-more-than-others) includes a construction worker's account of heat constraints. CRI's [2025 qualitative report](https://cri.org/reports/they-dont-see-what-heat-does-to-our-bodies/) includes factory/mill workers, not an exclusively outdoor-crew sample. Dawn's [June 2024 report](https://www.dawn.com/news/1842161) describes suspected heatstroke presentations among people believed to be labourers; it does not establish shift-time collapse or verified occupational deaths. These reports are contextual evidence only, never labels, incidence estimates or proof of this planner's benefit. Some source pages were unavailable during this build; retain the supplied qualifications and verify original passages before demo.
+
+Initial sustainability hypothesis: open-source, grant/public-budget support for a local pilot. Commercial usage would need a separate Open-Meteo commercial agreement or compliant self-hosting; free noncommercial API terms do not cover a subscription business.
+
+Measured incremental service spend for this build: $0. Local electricity, existing hardware, bandwidth and people's time are not zero-cost and have not been measured. API requests and process memory/runtime are recorded, not extrapolated into unverified savings. An estimate of recurring labor/energy cost requires host and team input; those remain TBD. New HF Docker compute creation may require an existing paid plan; do not subscribe without authorization. An eligible free Gradio ZeroGPU Space is a possible alternative requiring verification.
+
+Proposed validation: let a Karachi supervisor compare a real constrained shift with current practice, check feasibility and understandability, and record time spent. Do not trial unsafe exposures or claim reduced illness. OSM context and PKT presentation support local usability, but no user pilot, PMD station validation, nationwide validation, worker demographic fairness, or causal health benefit has been established.

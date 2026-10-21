@@ -1,0 +1,4 @@
+source,query,fetched_at_utc,sha256,license,raw_file,bytes
+CDC/NIOSH,https://www.cdc.gov/robots.txt,2026-10-19T14:31:54.752165Z,2837016c20845bf0f86ecfad68dbb4d37993338ee4584abd502087da48ea5ca7,CDC public access policy,raw/guidance/cdc-robots.txt,1699
+CDC/NIOSH,https://www.cdc.gov/other/agencymaterials.html,2026-10-19T14:31:55.383342Z,213845d3cbbe12535b8d1492141e1497c91477fd4a9f9a9f96cbdce48c88d04f,CDC agency materials policy,raw/guidance/cdc-reuse.html,80254
+CDC/NIOSH,https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf,2026-10-19T14:31:57.019536Z,db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3,"Public domain; explicit NIOSH permission, PDF page 4",raw/guidance/niosh-2016-106.pdf,3716182

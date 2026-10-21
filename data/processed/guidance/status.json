@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "method": "extractive_retrieval",
+  "llm_generation": "NOT IMPLEMENTED",
+  "chunks": 5,
+  "source_sha256": "db50cd0d8c9ac921e6eacad550ba9ed34629891ace4035ccbeffc44fd8ba5ea3",
+  "source_url": "https://www.cdc.gov/niosh/docs/2016-106/pdfs/2016-106.pdf",
+  "attribution": "Source: CDC/NIOSH. Original guidance is available free on the CDC website. Use of this material does not imply endorsement by CDC, NIOSH, HHS, or the U.S. Government.",
+  "reuse_url": "https://www.cdc.gov/other/agencymaterials.html",
+  "manifest": "guidance_manifest.csv",
+  "built_at_utc": "2026-10-21T15:05:12.472290Z"
+}

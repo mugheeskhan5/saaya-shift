@@ -1,0 +1,25 @@
+# Local environments and generated execution state only.
+.venv/
+.venv-space/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.prefect/
+work/
+node_modules/
+.vite/
+.vite-temp/
+
+# Secrets; sanitized examples may be committed.
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Machine-specific desktop files.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Intentionally retain ALL packaged data/ and evidence/, including the warehouse,
+# manifests, original run exports, raw responses, screenshots and final summary.

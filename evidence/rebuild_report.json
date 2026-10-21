@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "method": "fresh layers; verified raw cache only; no network",
+  "directory": "work\\rebuild-1792420963658822000",
+  "duration_seconds": 11.339726200007135,
+  "rss_mb_at_end": 145.18359375,
+  "api_calls": 0,
+  "tables": {
+    "cleaned/weather.csv": {
+      "expected": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "actual": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "identical": true
+    },
+    "cleaned/forecast.csv": {
+      "expected": "cd0fe46fa8f3ce269e01b8b426d7bbb8318c81b64c4c71e708ad2a5dc565dd7a",
+      "actual": "cd0fe46fa8f3ce269e01b8b426d7bbb8318c81b64c4c71e708ad2a5dc565dd7a",
+      "identical": true
+    },
+    "cleaned/osm.csv": {
+      "expected": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "actual": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "identical": true
+    },
+    "processed/weather.csv": {
+      "expected": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "actual": "4d0978b69860a3259f534622867506a5e0bf1cd13ade2814d0aca093d0d18f9b",
+      "identical": true
+    },
+    "processed/forecast.csv": {
+      "expected": "cd0fe46fa8f3ce269e01b8b426d7bbb8318c81b64c4c71e708ad2a5dc565dd7a",
+      "actual": "cd0fe46fa8f3ce269e01b8b426d7bbb8318c81b64c4c71e708ad2a5dc565dd7a",
+      "identical": true
+    },
+    "processed/osm.csv": {
+      "expected": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "actual": "77a526b1484299409c2b1fd06fc49f362fc9b898b34c7303f96ed55e6e0aa8db",
+      "identical": true
+    }
+  }
+}

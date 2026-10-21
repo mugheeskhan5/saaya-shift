@@ -1,0 +1,56 @@
+[
+  {
+    "id": "c6375ecf-d712-4045-bb59-574b406aec7c",
+    "created": "2026-10-19T15:00:21.112356Z",
+    "updated": "2026-10-19T20:12:25.010000Z",
+    "name": "karachi-hourly",
+    "version": "99dd4198",
+    "description": null,
+    "flow_id": "4f667fdf-b944-43c8-b08d-c488724425c1",
+    "paused": false,
+    "schedules": [
+      {
+        "id": "b383edbc-832d-46be-81a4-033d4ec48592",
+        "created": "2026-10-19T20:12:25.060408Z",
+        "updated": "2026-10-19T20:12:25.060408Z",
+        "deployment_id": "c6375ecf-d712-4045-bb59-574b406aec7c",
+        "schedule": {
+          "cron": "5 * * * *",
+          "timezone": null,
+          "day_or": true
+        },
+        "active": true,
+        "max_scheduled_runs": null,
+        "parameters": {},
+        "slug": null
+      }
+    ],
+    "concurrency_limit": null,
+    "global_concurrency_limit": null,
+    "concurrency_options": null,
+    "job_variables": {},
+    "parameters": {},
+    "tags": [],
+    "labels": {
+      "prefect.flow.id": "4f667fdf-b944-43c8-b08d-c488724425c1"
+    },
+    "work_queue_name": null,
+    "work_queue_id": null,
+    "last_polled": "2026-10-19T20:17:49.453541Z",
+    "parameter_openapi_schema": {
+      "title": "Parameters",
+      "type": "object",
+      "properties": {}
+    },
+    "path": ".",
+    "pull_steps": null,
+    "entrypoint": "saayashift\\flow.py:hourly_pipeline",
+    "storage_document_id": null,
+    "infrastructure_document_id": null,
+    "created_by": null,
+    "updated_by": null,
+    "work_pool_name": null,
+    "status": "READY",
+    "enforce_parameter_schema": true
+  }
+]

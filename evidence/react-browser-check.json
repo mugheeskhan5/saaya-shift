@@ -1,0 +1,10 @@
+{
+  "date_pkt": "2026-10-20",
+  "checks": {
+    "real_status_and_forecast": "PASS",
+    "duration_4_to_2_hours_updates_rank_and_row_count": "PASS",
+    "supported_question_NIOSH_citation": "PASS",
+    "safety_guarantee_abstention": "PASS"
+  },
+  "kind": "agent browser verification, not human acceptance"
+}
